@@ -2,8 +2,8 @@
 # Run this script using the following command:
 # python3 gradient_descent.py
 import json
-with open('features.json') as features_file:
-	features = json.load(features_file)
+with open('samples.json') as samples_file:
+	samples = json.load(samples_file)
 
 
 from statistics import mean
@@ -21,7 +21,7 @@ learning_rate = 0 # TODO: Initialize learning rate here
 
 iteration = 0
 steps_per_iteration = 50
-while True: # TODO: Check for convergence here
+while False: # TODO: Check for convergence here
 	iteration = iteration + steps_per_iteration
 	print(f"Iteration {iteration}, loss = {loss()}")
 	
@@ -29,6 +29,6 @@ while True: # TODO: Check for convergence here
 		raise NotImplementedError() # TODO: Adjust weights here
 
 print(f"(w0, w1) = {(w0, w1)}")
-print()
-for feature in features:
-	print((feature[0], feature[1], hw(feature[0])))
+print("Samples:")
+for sample in samples:
+	print((sample[0], sample[1], hw(sample[0])))
