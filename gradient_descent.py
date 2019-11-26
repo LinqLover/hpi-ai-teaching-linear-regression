@@ -7,13 +7,14 @@ with open('samples.json') as samples_file:
 
 
 from statistics import mean
+import math
 import random
 
 def hw(x):
 	return w1 * x + w0
 
 def stderr(samples, w1, w0):
-	raise NotImplementedError() # TODO: Compute standard error here
+	return math.sqrt(mean([(y - (hw(x))) ** 2 for [x, y] in samples]))
 
 # TODO: Compute gradient here
 def gradient_w0(samples, w1, w0):
@@ -25,14 +26,13 @@ w1, w0 = 0, 0 # TODO: Initialize weights here
 learning_rate = 0 # TODO: Initialize learning rate here
 
 iteration = 0
-steps_per_iteration = 50
-while stderr(samples, w1, w0) > 123: # TODO: Insert convergence treshold here
-	iteration = iteration + steps_per_iteration
-	print(f"Iteration {iteration}, w = ({w0:.2f}, {w1:.2f}), stderr = {stderr(samples, w1, w0):.2f}")
+g0 = g1 = math.inf
+while False: # TODO: Check for convergence here
+	iteration += 1
+	print(f"Iteration {iteration}, w = ({w0:.2f}, {w1:.2f}), stderr = {stderr(samples, w1, w0):.2f}, g = ({g0:.2f}, {g1:.2f})")
 	
-	for i in range(0, steps_per_iteration):
-		# TODO: Update weights from gradient here
-		pass
+	# TODO: Update weights from gradient here
+	pass
 
 print("Samples:")
 print("x, y, hw(x)")
