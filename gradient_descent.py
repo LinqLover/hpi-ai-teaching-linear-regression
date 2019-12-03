@@ -13,7 +13,7 @@ import random
 def hw(x):
 	return w1 * x + w0
 
-def stderr(samples, w1, w0):
+def loss(samples, w1, w0):
 	return math.sqrt(mean([(y - (hw(x))) ** 2 for [x, y] in samples]))
 
 # TODO: Compute gradient here
@@ -29,7 +29,7 @@ iteration = 0
 g0 = g1 = math.inf
 while False: # TODO: Check for convergence here
 	iteration += 1
-	print(f"Iteration {iteration}, w = ({w0:.2f}, {w1:.2f}), stderr = {stderr(samples, w1, w0):.2f}, g = ({g0:.2f}, {g1:.2f})")
+	print(f"Iteration {iteration}, w = ({w0:.2f}, {w1:.2f}), loss = {loss(samples, w1, w0):.2f}, g = ({g0:.2f}, {g1:.2f})")
 	
 	# TODO: Update weights from gradient here
 	pass
