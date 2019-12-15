@@ -5,8 +5,6 @@ import json
 with open('samples.json') as samples_file:
 	samples = json.load(samples_file)
 
-
-from statistics import mean
 import math
 import random
 
@@ -14,7 +12,7 @@ def hw(x):
 	return w1 * x + w0
 
 def loss(samples, w1, w0):
-	return math.sqrt(mean([(y - (hw(x))) ** 2 for [x, y] in samples]))
+	return sum([(y - (hw(x))) ** 2 for [x, y] in samples])
 
 # TODO: Compute gradient here
 def gradient_w0(samples, w1, w0):

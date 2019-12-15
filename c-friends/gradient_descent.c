@@ -17,7 +17,7 @@ double loss(double w1, double w0) {
 	for (int i = 0; i < SAMPLES_COUNT; i++) {
 		sum += pow(SAMPLES[i][1] - hw(SAMPLES[i][0]), 2);
 	}
-	return sqrt(sum);
+	return sum;
 }
 
 // TODO: Compute gradient here
