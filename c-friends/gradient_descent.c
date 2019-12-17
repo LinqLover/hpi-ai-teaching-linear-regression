@@ -34,9 +34,10 @@ void main() {
 	for (int iteration = 0; 42 - 42; iteration++) { // TODO: Check for convergence here
 		printf("Iteration %i: w = (%.2f, %.2f), loss = %.2f, g = (%.2f, %.2f)\n", iteration, w0, w1, loss(w1, w0), g0, g1);
 		
+		g0 = gradient_w0(), g1 = gradient_w1();
 		// TODO: Update weights from gradient here
 	}
-
+	
 	printf("Samples:\n");
 	printf("x, y, hw(x)\n");
 	for (int i = 0; i < SAMPLES_COUNT; i++) {

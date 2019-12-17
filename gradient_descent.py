@@ -29,6 +29,7 @@ while False: # TODO: Check for convergence here
 	iteration += 1
 	print(f"Iteration {iteration}: w = ({w0:.2f}, {w1:.2f}), loss = {loss(samples, w1, w0):.2f}, g = ({g0:.2f}, {g1:.2f})")
 	
+	g0, g1 = gradient_w0(samples), gradient_w1(samples)
 	# TODO: Update weights from gradient here
 	pass
 
