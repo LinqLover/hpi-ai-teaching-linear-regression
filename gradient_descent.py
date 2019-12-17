@@ -12,12 +12,12 @@ def hw(x):
 	return w1 * x + w0
 
 def loss(samples, w1, w0):
-	return sum([(y - (hw(x))) ** 2 for [x, y] in samples])
+	return sum([(hw(x) - y) ** 2 for [x, y] in samples])
 
 # TODO: Compute gradient here
-def gradient_w0(samples, w1, w0):
+def gradient_w0(samples):
 	raise NotImplementedError()
-def gradient_w1(samples, w1, w0):
+def gradient_w1(samples):
 	raise NotImplementedError()
 
 w1, w0 = 0, 0 # TODO: Initialize weights here

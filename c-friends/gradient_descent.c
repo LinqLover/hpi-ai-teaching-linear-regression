@@ -15,7 +15,7 @@ double hw(double x) {
 double loss(double w1, double w0) {
 	double sum = 0;
 	for (int i = 0; i < SAMPLES_COUNT; i++) {
-		sum += pow(SAMPLES[i][1] - hw(SAMPLES[i][0]), 2);
+		sum += pow(hw(SAMPLES[i][0]) - SAMPLES[i][1], 2);
 	}
 	return sum;
 }
