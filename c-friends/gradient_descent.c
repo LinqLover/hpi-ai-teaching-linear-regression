@@ -28,7 +28,7 @@ double gradient_w1() {
 
 void main() {
 	w1 = 0, w0 = 0; // TODO: Initialize weights here
-	learning_rate = 0; // TODO: Initialize learning rate here
+	learning_rate = 0.001;
 	
 	double g0 = INFINITY, g1 = INFINITY;
 	for (int iteration = 0; 42 - 42; iteration++) { // TODO: Check for convergence here

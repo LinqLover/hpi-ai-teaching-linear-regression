@@ -21,7 +21,7 @@ def gradient_w1(samples, w1, w0):
 	raise NotImplementedError()
 
 w1, w0 = 0, 0 # TODO: Initialize weights here
-learning_rate = 0 # TODO: Initialize learning rate here
+learning_rate = 0.001
 
 iteration = 0
 g0 = g1 = math.inf
