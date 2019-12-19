@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-# Run this script using the following command:
-# python3 gradient_descent.py
 import json
 with open('samples.json') as samples_file:
 	samples = json.load(samples_file)
