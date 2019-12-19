@@ -11,3 +11,4 @@ gradient_descent_solution: gradient_descent_solution.c
 clean: 
 	$(RM) *.o 
 	$(RM) gradient_descent
+	$(RM) gradient_descent_solution
